@@ -1,42 +1,40 @@
-# Bank Customer Classification Project
+# 05. Банковский маркетинг: откроет ли клиент депозит (классификация)
 
-This project is part of the Skill Factory Data Science course. The goal is to analyze bank marketing campaign data and build a classification model to predict whether a client will open a deposit.
+По данным маркетинговой кампании банка предсказать, откроет ли клиент депозит (`deposit`), и выяснить, какие факторы влияют на решение.
 
-## 📊 Project Overview
-The data belongs to a real bank. The objective is to identify patterns and decisive factors that influence a client's decision to invest money. Successful prediction helps the bank increase revenue by targeting the right audience.
+**Файлы:** [`Project_4_ML.ipynb`](Project_4_ML.ipynb) · [`bank_fin.csv`](bank_fin.csv)
 
-## 🛠️ Tech Stack
-- **Python** (Pandas, NumPy)
-- **Visualization:** Matplotlib, Seaborn
-- **Machine Learning:** Scikit-learn
-- **Hyperparameter Tuning:** GridSearchCV, Optuna
+## Методология
 
-## 📉 Key Steps
-1. **Data Preprocessing**:
-   - Cleaned the `balance` feature (removed currency symbols and spaces).
-   - Handled missing values in `job`, `education`, and `balance`.
-   - Removed outliers using the **Tukey method** (IQR).
-2. **Exploratory Data Analysis (EDA)**:
-   - Analyzed target variable balance.
-   - Identified correlations between social factors (age, job, education) and deposit opening.
-   - Discovered that **call duration** and **previous success** are the strongest predictors.
-3. **Feature Engineering**:
-   - Encoded categorical variables using `LabelEncoder` and `One-Hot Encoding`.
-   - Selected the top 15 features using `SelectKBest` (ANOVA F-value).
-4. **Modeling & Evaluation**:
-   - Trained Logistic Regression, Decision Trees, Random Forest, and Gradient Boosting.
-   - Implemented a **Stacking Classifier** for better precision.
-   - Optimized hyperparameters using **Optuna**.
+1. **Очистка:** признак `balance` приведён к числу (убраны символы валюты и пробелы), пропуски в `job`, `education`, `balance` обработаны, выбросы удалены по методу Тьюки (IQR).
+2. **EDA:** баланс целевой переменной, связь возраста, профессии, образования с открытием депозита. Самые сильные факторы — длительность звонка (`duration`) и результат прошлой кампании.
+3. **Признаки:** `LabelEncoder` и One-Hot, отбор топ-15 признаков через `SelectKBest` (ANOVA F).
+4. **Модели:** логистическая регрессия, решающие деревья, Random Forest, Gradient Boosting, Stacking; гиперпараметры — `GridSearchCV` и Optuna.
 
-## 🏆 Results
-The best performance was achieved by the **Gradient Boosting** model:
-- **Accuracy:** ~82-84%
-- **F1-score:** ~0.82
+## Результаты
 
-## 📂 Project Structure
-- `Project_4_ML.ipynb`: The main Jupyter Notebook with all calculations and visualizations.
-- `bank_fin.csv`: The dataset used for the project.
-- `README.md`: Project documentation.
+Метрики на тесте (3004 объекта), как они напечатаны в сохранённом прогоне ноутбука (при перезапуске на новых версиях библиотек цифры могут отличаться на 0.01–0.02):
 
-## 📝 Conclusion
-The analysis revealed that the bank should prioritize clients who have previously opened deposits and focus on call quality, as duration is a critical factor for conversion.
+| Модель | Метрика | Значение |
+|--------|---------|----------|
+| Logistic Regression | accuracy | 0.79 |
+| Decision Tree (подобранные параметры) | accuracy | 0.80 |
+| Random Forest | accuracy / recall | 0.82 / 0.83 |
+| Gradient Boosting | F1 | 0.80 |
+| Stacking | precision | 0.79 |
+| Random Forest + Optuna | accuracy | 0.82 |
+
+Важность признаков в Gradient Boosting: `duration` (≈0.50), `pdays` (≈0.15), `housing` (≈0.08). Разброс между моделями небольшой, все они дают accuracy около 0.79–0.82.
+
+**Вывод:** банку стоит в первую очередь работать с клиентами, уже открывавшими депозиты, и следить за качеством звонка. Оговорка: `duration` известна только после звонка, поэтому в реальном скоринге до звонка этот признак недоступен.
+
+## Запуск
+
+```bash
+pip install -r requirements.txt
+jupyter notebook Project_4_ML.ipynb
+```
+
+## Стек
+
+pandas · numpy · scikit-learn · Optuna · matplotlib · seaborn
