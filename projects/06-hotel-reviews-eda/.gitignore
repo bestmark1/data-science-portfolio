@@ -1,0 +1,13 @@
+# Игнорируем большие датасеты
+Data/hotels.csv
+Data/hotels_test.csv
+Data/hotels_train.csv
+Data/submission.csv
+
+# Если вы хотите игнорировать всю папку Data, раскомментируйте строчку ниже:
+Data/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
