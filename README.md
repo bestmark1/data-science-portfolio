@@ -9,11 +9,27 @@
 
 ## Каталог проектов
 
-| # | Проект | Задача | Ключевые методы | Результат | Папка |
-|---|--------|--------|-----------------|-----------|-------|
-| 01 | Wine Quality Classification | Бинарная классификация качества красного вина | EDA, `StandardScaler`, `SVC` (RBF), `GridSearchCV`, `StratifiedKFold` | Accuracy: 89.1% CV, 92.2% test | [projects/01-wine-quality-classification](projects/01-wine-quality-classification) |
+### ⭐ Flagship
 
-Планируются: детекция аномалий, временные ряды, чат-бот (NLP). Список будет пополняться.
+| # | Проект | Задача | Ключевые методы | Результат |
+|---|--------|--------|-----------------|-----------|
+| 01 | [Smart Replenishment](projects/01-smart-replenishment) | Прогноз спроса на 28 дней и приоритеты пополнения запасов (M5) | LightGBM, CatBoost, DuckDB, FastAPI, Streamlit, Docker | WMAPE 62.99% против 69.70% у лучшего baseline · [код](https://github.com/bestmark1/smart-replenishment) · [демо](https://smart-replenishment.185.79.138.118.nip.io) |
+| 02 | [Sales Time Series Forecasting](projects/02-sales-time-series-forecasting) | Прогноз продаж сети магазинов (Kaggle Favorita) | ARIMA, Prophet, XGBoost, CatBoost | Праздники дали главный прирост точности: RMSE ≈109 → ≈74 тыс. |
+| 03 | [tutu-swipe](projects/03-tutu-swipe) | Свайп-подбор путешествий поверх MCP Туту (ИИ-хакатон) | TypeScript, Next.js, MCP, байесовский ранжировщик | Первая карточка за 17 мс · [код](https://github.com/bestmark1/tutu-swipe) |
+
+### Классический ML и анализ данных
+
+| # | Проект | Задача | Ключевые методы | Результат |
+|---|--------|--------|-----------------|-----------|
+| 04 | [NYC Taxi Trip Duration](projects/04-nyc-taxi-trip-duration) | Регрессия: длительность поездки такси | OSRM, погода, K-Means, XGBoost, CatBoost | RMSLE 0.39 (XGBoost) |
+| 05 | [Bank Customer Classification](projects/05-bank-customer-classification) | Классификация: откроет ли клиент депозит | Тьюки, SelectKBest, Random Forest, Stacking, Optuna | Accuracy ≈ 0.82 |
+| 06 | [Hotel Reviews EDA](projects/06-hotel-reviews-eda) | EDA отзывов Booking и бейзлайн рейтинга | Feature engineering, target encoding, RandomForest | MAPE ≈ 13.59% |
+| 07 | [HH Resume EDA](projects/07-hh-resume-eda) | EDA резюме hh.ru: зарплатные ожидания | pandas, Plotly, очистка выбросов | Аномалии и зависимость ЗП от города и образования |
+| 09 | [Wine Quality Classification](projects/09-wine-quality-classification) | Бинарная классификация качества красного вина | `StandardScaler`, `SVC` (RBF), `GridSearchCV`, `StratifiedKFold` | Accuracy: 89.1% CV, 92.2% test |
+
+Проект 08 (SQL-анализ вакансий hh.ru) будет добавлен позже. Планируются также детекция аномалий и NLP-проекты.
+
+**Про данные.** У проектов 02, 04, 06 и 07 исходные датасеты слишком велики для GitHub и не входят в репозиторий. Ссылки на источники — в README каждого проекта; результаты сохранены в выводе ноутбуков.
 
 ## Стек
 
@@ -26,11 +42,11 @@ git clone https://github.com/bestmark1/data-science-portfolio.git
 cd data-science-portfolio
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-cd projects/01-wine-quality-classification
+cd projects/09-wine-quality-classification
 jupyter notebook
 ```
 
-Ноутбуки читают данные по относительному пути, поэтому запускать их нужно из папки проекта.
+Ноутбуки читают данные по относительному пути, поэтому запускать их нужно из папки проекта. У проектов с тяжёлыми библиотеками (Prophet, CatBoost, Optuna, Plotly) есть свой `requirements.txt` в папке проекта.
 
 ## Структура репозитория
 
@@ -42,7 +58,7 @@ data-science-portfolio/
     └── NN-project-name/
         ├── README.md    # описание проекта: задача, данные, методы, результаты
         ├── *.ipynb      # ноутбук
-        └── *.csv        # данные проекта
+        └── *.csv        # небольшие данные проекта (тяжёлые не хранятся в репозитории)
 ```
 
 ## Как добавляется новый проект
