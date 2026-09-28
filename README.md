@@ -25,11 +25,12 @@
 | 05 | [Bank Customer Classification](projects/05-bank-customer-classification) | Классификация: откроет ли клиент депозит | Тьюки, SelectKBest, Random Forest, Stacking, Optuna | Accuracy ≈ 0.82 |
 | 06 | [Hotel Reviews EDA](projects/06-hotel-reviews-eda) | EDA отзывов Booking и бейзлайн рейтинга | Feature engineering, target encoding, RandomForest | MAPE ≈ 13.59% |
 | 07 | [HH Resume EDA](projects/07-hh-resume-eda) | EDA резюме hh.ru: зарплатные ожидания | pandas, Plotly, очистка выбросов | Аномалии и зависимость ЗП от города и образования |
+| 08 | [HH Vacancies SQL](projects/08-hh-vacancies-sql) | SQL-анализ вакансий hh.ru и рынка DS | PostgreSQL, psycopg2, pandas | 49 197 вакансий; 1 771 DS-вакансия, 51 для junior |
 | 09 | [Wine Quality Classification](projects/09-wine-quality-classification) | Бинарная классификация качества красного вина | `StandardScaler`, `SVC` (RBF), `GridSearchCV`, `StratifiedKFold` | Accuracy: 89.1% CV, 92.2% test |
 
-Проект 08 (SQL-анализ вакансий hh.ru) будет добавлен позже. Планируются также детекция аномалий и NLP-проекты.
+Планируются также детекция аномалий и NLP-проекты.
 
-**Про данные.** У проектов 02, 04, 06 и 07 исходные датасеты слишком велики для GitHub и не входят в репозиторий. Ссылки на источники — в README каждого проекта; результаты сохранены в выводе ноутбуков.
+**Про данные.** У проектов 02, 04, 06, 07 и 08 исходные датасеты (или база данных) слишком велики для GitHub и не входят в репозиторий. Ссылки на источники — в README каждого проекта; результаты сохранены в выводе ноутбуков.
 
 ## Стек
 
