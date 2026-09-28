@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+*-checkpoint.ipynb
+*.ipynb-meta.json
+
+# macOS
+.DS_Store
+
+# Project specific datasets (Critical to avoid GitHub 100MB size limit)
+[Dd]ata/
+catboost_info/
+*.csv
+!Data/holiday_data.csv
+!Data/weather_data.csv
+
+# If you want to keep submissions, but they can be large, we can ignore them too.
+# Excluding all CSV files by default is safer for GitHub limit compliance.
