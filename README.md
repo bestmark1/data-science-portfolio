@@ -15,7 +15,7 @@
 |---|--------|--------|-----------------|-----------|
 | 01 | [Smart Replenishment](projects/01-smart-replenishment) | Прогноз спроса на 28 дней и приоритеты пополнения запасов (M5) | LightGBM, CatBoost, DuckDB, FastAPI, Streamlit, Docker | WMAPE 62.99% против 69.70% у лучшего baseline · [код](https://github.com/bestmark1/smart-replenishment) · [демо](https://smart-replenishment.185.79.138.118.nip.io) |
 | 02 | [Sales Time Series Forecasting](projects/02-sales-time-series-forecasting) | Прогноз продаж сети магазинов (Kaggle Favorita) | ARIMA, Prophet, XGBoost, CatBoost | Праздники дали главный прирост точности: RMSE ≈109 → ≈74 тыс. |
-| 03 | [tutu-swipe](projects/03-tutu-swipe) | Свайп-подбор путешествий поверх MCP Туту (ИИ-хакатон) | TypeScript, Next.js, MCP, байесовский ранжировщик | Первая карточка за 17 мс · [код](https://github.com/bestmark1/tutu-swipe) |
+| 03 | [tutu-swipe](projects/03-tutu-swipe) | Свайп-подбор путешествий поверх MCP Туту (ИИ-хакатон) | TypeScript, Next.js, MCP, байесовский ранжировщик | Первая карточка за 17 мс · [код](https://github.com/bestmark1/tutu-swipe) · [демо](http://45.150.39.20:8030) |
 | 10 | [Честная цена?](projects/10-fair-price) | Проверка цены квартиры в объявлении: диапазон, вердикт, объяснение | CatBoost (quantile), CQR, SHAP, FastAPI, Leaflet, Docker | MAPE 11,0% против 20,9% у бейзлайна; интервал покрывает 80,0% цен · [код](https://github.com/bestmark1/fair-price) · [демо](https://fair-price.185.79.138.118.nip.io/?example) |
 
 ### Классический ML и анализ данных
