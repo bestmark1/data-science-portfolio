@@ -1,6 +1,6 @@
 # 10. Честная цена? — проверка цены квартиры в объявлении ⭐
 
-**Код и полная документация:** [bestmark1/fair-price](https://github.com/bestmark1/fair-price)
+**Код и полная документация:** [bestmark1/fair-price](https://github.com/bestmark1/fair-price) · **Демо:** [fair-price.185.79.138.118.nip.io](https://fair-price.185.79.138.118.nip.io/?example)
 
 Проект лежит в отдельном репозитории (пакет на Python, веб-сервис, Docker, тесты, CI), здесь — краткая карточка.
 
