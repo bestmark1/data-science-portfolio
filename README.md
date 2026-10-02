@@ -17,6 +17,7 @@
 | 02 | [Sales Time Series Forecasting](projects/02-sales-time-series-forecasting) | Прогноз продаж сети магазинов (Kaggle Favorita) | ARIMA, Prophet, XGBoost, CatBoost | Праздники дали главный прирост точности: RMSE ≈109 → ≈74 тыс. |
 | 03 | [tutu-swipe](projects/03-tutu-swipe) | Свайп-подбор путешествий поверх MCP Туту (ИИ-хакатон) | TypeScript, Next.js, MCP, байесовский ранжировщик | Первая карточка за 17 мс · [код](https://github.com/bestmark1/tutu-swipe) · [демо](http://45.150.39.20:8030) |
 | 10 | [Честная цена?](projects/10-fair-price) | Проверка цены квартиры в объявлении: диапазон, вердикт, объяснение | CatBoost (quantile), CQR, SHAP, FastAPI, Leaflet, Docker | MAPE 11,0% против 20,9% у бейзлайна; интервал покрывает 80,0% цен · [код](https://github.com/bestmark1/fair-price) · [демо](https://fair-price.185.79.138.118.nip.io/?example) |
+| 11 | [Мониторинг модели](projects/11-model-monitoring) | Мониторинг ML-модели в работе: качество, дообучение, дрейф данных | Prometheus, Grafana, FastAPI, scikit-learn (`partial_fit`), PSI, Docker Compose | Дообучение на потоке: accuracy 74,8% против 70,1% без дообучения · [код](https://github.com/bestmark1/model-monitoring) · [демо](https://bestmark1.github.io/model-monitoring/) |
 
 ### Классический ML и анализ данных
 
