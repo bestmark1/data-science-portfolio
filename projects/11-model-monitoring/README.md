@@ -1,6 +1,6 @@
 # 11. Мониторинг ML-модели: Prometheus + Grafana ⭐
 
-**Код и полная документация:** [bestmark1/model-monitoring](https://github.com/bestmark1/model-monitoring) · **Демо-дашборд:** [bestmark1.github.io/model-monitoring](https://bestmark1.github.io/model-monitoring/)
+**Код и полная документация:** [bestmark1/model-monitoring](https://github.com/bestmark1/model-monitoring) · **Живой дашборд Grafana:** [model-monitoring.185.79.138.118.nip.io](https://model-monitoring.185.79.138.118.nip.io) · **Запись полного прогона:** [bestmark1.github.io/model-monitoring](https://bestmark1.github.io/model-monitoring/)
 
 Проект лежит в отдельном репозитории (сервис модели, Prometheus, Grafana, Docker Compose, тесты, CI), здесь — краткая карточка.
 
